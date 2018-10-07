@@ -1,0 +1,11 @@
+# node/npm
+node_modules/
+npm-debug.log
+.npm
+
+# fabrix
+.tmp/
+dist
+# other
+*.sw*
+.nyc_output

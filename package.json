@@ -1,0 +1,60 @@
+{
+  "name": "pj-backend",
+  "version": "0.0.1",
+  "keywords": [
+    "restuarants",
+    "booking system",
+    "reservations"
+  ],
+  "scripts": {
+    "build": "tsc -p ./src/tsconfig.release.json",
+    "lint": "tslint -p ./src",
+    "watch": "tsc -w -p ./src/tsconfig.release.json",
+    "test": "npm run clean && npm run copy && npm run lint && npm run build && nyc mocha",
+    "prepublishOnly": "npm run compile",
+    "compile": "npm run clean && npm run build && npm run copy",
+    "copy": "copyfiles -u 1 src/config/**/*.json dist",
+    "clean": "rm -rf dist"
+  },
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "dependencies": {
+    "@fabrix/fabrix": "^1.5.9",
+    "@fabrix/generics-render": "^1.1.1",
+    "@fabrix/spool-caches": "^1.5.0",
+    "@fabrix/spool-email": "^1.5.0",
+    "@fabrix/spool-events": "^1.5.0",
+    "@fabrix/spool-express": "^1.5.0",
+    "@fabrix/spool-generics": "^1.5.0",
+    "@fabrix/spool-hapi": "^1.5.0",
+    "@fabrix/spool-i18n": "^1.5.1",
+    "@fabrix/spool-notifications": "^1.5.0",
+    "@fabrix/spool-realtime": "^1.0.0",
+    "@fabrix/spool-repl": "^1.5.0",
+    "@fabrix/spool-router": "^1.5",
+    "@fabrix/spool-sequelize": "^1.5.0",
+    "@fabrix/spool-tasks": "^1.5.0",
+    "@fabrix/spool-winston": "^1.5.0",
+    "express": "^4.16.3",
+    "lodash": "^4.17.11",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "@fabrix/spool-repl": "^1.5",
+    "@fabrix/lint": "^1.0.0-alpha.3",
+    "@types/node": "~10.3.4",
+    "copyfiles": "^2.0.0",
+    "mocha": "^5",
+    "nyc": "^13.0.1",
+    "supertest": "^3",
+    "tslib": "~1.9.0",
+    "tslint": "~5.10.0",
+    "tslint-microsoft-contrib": "~5.0.3",
+    "tsutils": "~2.27.1",
+    "typescript": "~2.8.1"
+  },
+  "engines": {
+    "node": ">= 7.6.0 =< 10.0.0",
+    "npm": ">= 3.10.0"
+  }
+}
