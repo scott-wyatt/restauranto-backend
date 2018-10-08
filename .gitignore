@@ -1,4 +1,9 @@
 .tmp
+.history
+.nyc_output
+
+# Generated code
+dist/
 
 # Logs
 logs
