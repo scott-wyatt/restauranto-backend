@@ -2,9 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.stores = {
     postgres: {
+        orm: 'sequelize',
         typeValidation: true,
         benchmark: true,
-        uri: process.env.DATABASE_URL || 'postgres://restauranto:xs4restauranto@127.0.0.1:5432/restauranto_dev',
         dialect: 'postgres',
+        migrate: 'drop',
+        database: 'Sequelize',
+        host: '127.0.0.1',
     }
 };
