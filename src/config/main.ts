@@ -33,7 +33,7 @@ export const main = {
     // Spool for Express Webserver
     ExpressSpool,
     // Spool for Realtime connectivity
-    //RealtimeSpool,
+    // RealtimeSpool,
     // Spool for Sequelize ORM
     SequelizeSpool,
   ],
