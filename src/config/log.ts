@@ -7,7 +7,7 @@
 import { format, transports } from 'winston'
 
 export const log = {
-  level: 'info',
+  level: 'debug',
   transports: [
     new transports.Console({
       format: format.combine(

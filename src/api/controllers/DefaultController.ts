@@ -9,14 +9,14 @@ import { FabrixController as Controller } from '@fabrix/fabrix/dist/common'
  */
 export class DefaultController extends Controller {
 
-  hello (request, reply) {
-    return '<h1>Hello Fabrix</h1>'
+  hello (request, response) {
+    response.status(200).json(this.app.services.DefaultService.getApplicationInfo())
   }
 
   /**
    * Return some info about this application
    */
-  info (request) {
-    return this.app.services.DefaultService.getApplicationInfo()
+  info (request, response) {
+    response.status(200).json(this.app.services.DefaultService.getApplicationInfo())
   }
 }

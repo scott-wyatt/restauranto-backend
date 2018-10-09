@@ -15,7 +15,7 @@ export const stores = {
     orm: 'sequelize',
     typeValidation: true,
     benchmark: true,
-    uri: process.env.DATABASE_URL || 'postgres://restauranto:xs4restauranto@127.0.0.1:5432/restauranto_dev',
+    uri: process.env.DATABASE_URL || 'postgresql://restauranto:xs4restauranto@127.0.0.1:5432/restuaranto_dev',
     dialect: 'postgres',
     migrate: 'drop'
   }
