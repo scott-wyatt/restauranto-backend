@@ -43,9 +43,9 @@ export const web = {
    * Must return a promise with the native http/https server instance
    * @return Promise
    */
-  externalConfig: (fabrixApp, expressApp) => {
-    return Promise.resolve()
-  },
+  // externalConfig: (fabrixApp, expressApp) => {
+  //   return Promise.resolve()
+  // },
 
   /**
    * The port to bind the web server to
