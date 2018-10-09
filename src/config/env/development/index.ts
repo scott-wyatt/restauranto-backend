@@ -5,5 +5,5 @@
 import { main } from './main'
 
 export {
-  main
+  // main
 }

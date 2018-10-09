@@ -24,6 +24,18 @@ export const web = {
    * Middlewares to load (in order)
    */
   middlewares: {
+    order: [
+      'static',
+      'addMethods',
+      'cookieParser',
+      'session',
+      'bodyParser',
+      'methodOverride',
+      'router',
+      'www',
+      '404',
+      '500'
+    ]
   },
 
   /**
@@ -32,7 +44,7 @@ export const web = {
    * @return Promise
    */
   externalConfig: (fabrixApp, expressApp) => {
-      return Promise.resolve()
+    return Promise.resolve()
   },
 
   /**

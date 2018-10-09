@@ -4,14 +4,13 @@
  *
  * @see {@link http://fabrix.app/docs/config/main}
  */
-
-import { ExpressSpool } from '@fabrix/spool-express'
 /**
  * Spools: import spools
  */
+import { REPLSpool } from '@fabrix/spool-repl'
 import { GenericsSpool } from '@fabrix/spool-generics'
-import { HapiSpool } from '@fabrix/spool-hapi'
-import { RealtimeSpool } from '@fabrix/spool-realtime'
+// import { RealtimeSpool } from '@fabrix/spool-realtime'
+import { ExpressSpool } from '@fabrix/spool-express'
 import { RouterSpool } from '@fabrix/spool-router'
 import { SequelizeSpool } from '@fabrix/spool-sequelize'
 import { WinstonSpool } from '@fabrix/spool-winston'
@@ -20,12 +19,11 @@ import { resolve } from 'path'
 export const main = {
 
   /**
-   * Order does *not* matter. Each module is loaded according to its own
-   * requirements.
+   * Order does matter. Each module is loaded according to its own
+   * requirements and spools loaded last take higher config priority.
    */
   spools: [
-    // Spool for generics
-    GenericsSpool,
+    REPLSpool,
     // Spool for Winston as a log transport
     WinstonSpool,
     // Spool for Router
@@ -36,6 +34,8 @@ export const main = {
     // RealtimeSpool,
     // Spool for Sequelize ORM
     SequelizeSpool,
+    // Spool for generics
+    GenericsSpool
   ],
 
   /**

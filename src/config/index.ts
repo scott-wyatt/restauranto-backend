@@ -10,6 +10,7 @@ import { log } from './log'
 import { main } from './main'
 import { models } from './models'
 import { routes } from './routes'
+import { session } from './session'
 import { stores } from './stores'
 import { web } from './web'
 
@@ -21,6 +22,7 @@ export {
   main,
   models,
   routes,
+  session,
   stores,
   web
 }
